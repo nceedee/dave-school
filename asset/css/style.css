@@ -1,0 +1,625 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: regular;
+    src: url(../font/Raleway/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(../font/Raleway/static/Raleway-Light.ttf);
+}
+
+@font-face {
+    font-family: bold-one;
+    src: url(../font/Raleway/static/Raleway-Bold.ttf);
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: regular;
+    font-size: 16px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.socio span{
+    color: white;
+    border: solid 1px white;
+    border-radius: 50%;
+    padding: 5px 5.5px;
+    cursor: pointer;
+}
+.lang{
+    color: white;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.lang span{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.lang option{
+    cursor: pointer;
+}
+
+.social-header{
+    background-color: rgb(39, 32, 32);
+    padding: 2px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+
+.lang select{
+    background-color: rgb(39, 32, 32);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+
+.lang form{
+    display: flex;
+    margin-top: 20px;
+}
+
+
+.socio-lang{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.menu-header{
+    background-color: white;
+    color: rgb(51, 47, 47);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    position: relative;
+}
+
+.label input[ type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.label  .check{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+.label input[ type="checkbox"]:checked ~ .check{
+    background-color: #092c3e;
+    box-shadow: 0 0 0 3200px rgba(0, 0, 0 , .3);
+}
+
+.label .check:before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    background-color: #092c3e;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: 0.5s;
+    
+}
+
+.label input[ type="checkbox"]:checked ~ .check:before{
+    transform: translateX(-50px);
+    
+}
+
+.label .check:after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    background-color: #fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+.label input[ type="checkbox"]:checked ~ .check:after{
+    transform: translateX(0px);
+}
+
+
+.label{
+    position: fixed;
+    bottom: 12;
+    right: 20;
+    z-index: 1;
+}
+
+
+
+.border{
+    border-bottom: 5px solid rgb(172, 163, 163);
+    padding-bottom: 20px;
+    animation: h2 3s;
+}
+
+.menu-list input[type="submit"]{
+    font-family: bold-one;
+    color: white;
+    background-color: rgb(39, 32, 32);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin-left: 30px;
+    padding: 0px 25px;
+    cursor: pointer;
+}
+
+.noz{
+    cursor: pointer;
+}
+
+.menu-list{
+    display: flex;
+    cursor: pointer;
+}
+
+.menu-list h4{
+    margin-left: 30px;
+}
+
+.bar:hover{
+    transform: translateX(20px);
+}
+
+.bar{
+    transition: all 2s;
+}
+
+
+header{
+    background-image: url(../image/2.webp);
+    background-size: cover;
+    padding: 100px 0px 140px 0px;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+
+.all-content{
+    overflow-x: hidden;
+}
+
+.header-words{
+    width: 35%;
+}
+
+.header-words h1{
+    font-size: 60px;
+    font-family: bold-one;
+    
+    color: white;
+}
+
+.header-words p{
+    font-size: px;
+    font-weight: bold;
+    color: white;
+}
+
+.form{
+    background-color: white;
+    width: 35%;
+    padding: 25px;
+    color: rgb(51, 47, 47);
+    font-weight: 550;
+    border-radius: 4px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h2{
+    text-align: center;
+    font-family: bold-one;
+}
+
+.form input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    background-color: rgb(216, 208, 208);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.form2 input[type="date"]{
+    cursor: pointer;
+}
+
+
+.form2{
+    margin-top: 20px;
+    
+}
+
+.form3{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form3 select{
+    margin-top: 20px;
+    background-color: rgb(216, 208, 208);
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btn-input{
+    background-color: rgb(39, 32, 32);
+    outline: none;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border-radius: 2px;
+    margin-top: 50px;
+    font-family: bold-one;
+    cursor: pointer;
+}
+.salford{
+    background-color: white;
+    color: rgb(51, 47, 47);
+    padding: 60px 60px;
+    animation-name: bobo;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    transition: all 3s;
+}
+
+
+
+@keyframes bobo {
+    0%{
+        transform: translateX(-1000px);
+    }
+}
+
+
+.salford h1{
+    text-align: center;
+    font-family: bold-one;
+    
+    line-height: 0px;
+    padding: 0px;
+}
+
+.salford h1:nth-child(2){
+    color: rgb(143, 98, 16);
+    padding-bottom: 40px;
+}
+
+.salford-img img{
+    width: 220px;
+    height: 150px;
+    border-radius: 4px;
+    
+}
+
+.salford-img{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 12px 60px 12px 60px;
+    margin-left: 30px;
+    
+
+}
+
+.salford-img img{
+    transition:  all 2s;
+}
+
+.salford-img img:hover{
+    transform: scale(1.1) translateY(24px);
+}
+
+.salford-img h2{
+    line-height: .5;
+}
+
+
+.bar-sign{
+    display: none;
+}
+
+
+
+
+.salford h4{
+    color: rgb(143, 98, 16);
+    font-family: bold-one;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.bar{
+    color: rgb(39, 32, 32);
+    background-color: white;
+    padding: 12px 50px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bar h4:hover{
+    background-color: rgb(39, 32, 32);
+    color: white;
+    padding-right: 30px;
+}
+
+.bar input{
+    background-color: rgb(39, 32, 32);
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+
+
+
+
+@media (max-width: 1024px){
+    .social-header a{
+        font-size: 15px;
+    }
+
+    .social-header > span{
+        font-size: 15px;
+    }
+
+    .social-header{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .menu-header h2{
+        font-size: 17px;
+    }
+
+    .menu-list h4{
+        font-size: 13px;
+    }
+
+    .menu-list input{
+        font-size: 13px;
+        padding: 8px 20px;
+    }
+
+    .menu-header{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .header-words h1{
+        font-size: 40px;
+    }
+
+    .header-words p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .form label{
+        font-size: 13px;
+    }
+
+    .form h2{
+        font-size: 17px;
+    }
+
+    .form button{
+        margin-top: 15px;
+    }
+
+    .salford h1{
+        font-size: 30px;
+    }
+
+    .salford-img{
+        margin-right: 20px;
+        padding: 0px 40px;
+    }
+
+    .salford{
+        padding: 20px;
+    }
+    
+}
+
+
+@media (max-width: 991px){
+    .form{
+        padding: 16px;
+    }
+
+    
+
+    .salford img{
+        width: 600px;
+        height: auto;
+    }
+
+    .salford-img .sal-word1{
+        text-align: center;
+    }
+
+    .bar-sign{
+        display: block;
+    }
+
+    
+
+    .menu-header:hover .bar-sign + .bar{
+        display: block;
+    }
+
+    .menu-list{
+        display: none;
+    }
+
+    
+}
+
+@media (max-width: 647px){
+    .social-header{
+        overflow-x: scroll;
+        padding: 12px 20px;
+    }
+
+    .menu-header{
+        padding: 12px 20px;
+    }
+
+    .header-words{
+        width: 100%;
+        
+        text-align: center;
+    }
+
+    .form{
+        width: 100%;
+        
+    }
+
+    header{
+        padding: 40px 20px;
+    }
+
+    .salford img{
+        width: 400px;
+    }
+}
+
+@media (max-width: 446px){
+    .social-header{
+        width: 100%;
+    }
+
+    .num{
+        width: 40%;
+        
+    }
+
+    .num a{
+        font-size: 12px;
+    }
+    .socio{
+        width: 100%;
+        margin-left: 30px;
+        
+    }
+
+    .socio span{
+        font-size: 12px;
+    }
+
+    .lang{
+        width: 20%;
+    }
+
+    .lang span{
+        font-size: 17px;
+    }
+
+    .lang select{
+        font-size: 12px;;
+    }
+
+    .salford h1:nth-child(1){
+        line-height: 40px;
+    }
+
+    .salford-img img{
+        width: 300px;
+    }
+}
+
+@media (max-width: 375px){
+    .lang{
+        width: 10%;
+    }
+}
+
+
+@media (max-width: 340px){
+    .social-header{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .socio{
+        width: 130px;
+    }
+}
+
+@media (max-width: 320px){
+    .salford-img img{
+        width: 250px;
+    }
+}
+
+
+
+
